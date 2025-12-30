@@ -1,4 +1,4 @@
-const greeting = require("../script")
+const {greeting} = require("../script")
 
 describe("greeting", () => {
     test("Should be a function", () =>  {
