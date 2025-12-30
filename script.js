@@ -4,8 +4,8 @@ const greeting = () => {
 
 // Implement a Sorted Index Finder
 
-const getIndexToIns  = () => {
-
+const getIndexToIns  = (arr, num) => {
+  return num
 }
 
 // Node / Jest export
