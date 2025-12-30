@@ -9,4 +9,15 @@ describe("getIndexToIns", () => {
   test("should always return a number", () => {
     expect(typeof getIndexToIns([], 5)).toBe("number");
   });
+  //   Test 3. Your function should use the sort method.
+  test("function should use the sort method.", () => {
+    const arr = [3, 1, 2];
+
+    const sortSpy = jest.spyOn(arr, "sort");
+
+    getIndexToIns(arr, 2);
+
+    expect(sortSpy).toHaveBeenCalled();
+    sortSpy.mockRestore();
+  })
 });
