@@ -46,4 +46,8 @@ describe("getIndexToIns", () => {
   test("getIndexToIns([3, 10, 5], 3) should return 0.", () => {
     expect(getIndexToIns([3, 10, 5], 3)).toBe(0)
   })
+  // Test 9. getIndexToIns([5, 3, 20, 3], 5) should return 2.
+  test("getIndexToIns([5, 3, 20, 3], 5) should return 2.", () => {
+    expect(getIndexToIns([5, 3, 20, 3], 5)).toBe(2)
+  })
 });
