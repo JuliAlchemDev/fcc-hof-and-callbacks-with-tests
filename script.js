@@ -5,8 +5,9 @@ const greeting = () => {
 // Implement a Sorted Index Finder
 
 const getIndexToIns  = (arr, num) => {
-    arr.sort()
-  return num
+   const index = el => el > num
+    
+  return arr.sort().findIndex(index)
 }
 
 // Node / Jest export
@@ -15,3 +16,4 @@ if(typeof module !== "undefined" && module.exports){
         greeting,
         getIndexToIns};
 }
+
