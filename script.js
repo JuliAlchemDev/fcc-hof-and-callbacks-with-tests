@@ -15,15 +15,12 @@ const greeting = () => {
 
 const getIndexToIns = (arr, num) => {
   const index = (el) => el >= num;
-  let result = arr.sort((a, b) => a - b).findIndex(index);
-  if(result === -1) {
-    arr.push(num)
-    return arr.sort((a, b) => a - b).findIndex(index);
-  }
-  return result
+  const result = arr.sort((a, b) => a - b).findIndex(index);
+
+  return result === -1 ? arr.length : result;
 };
 
-
+// console.log(getIndexToIns([3, 10, 5], 11))
 // Node / Jest export
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
