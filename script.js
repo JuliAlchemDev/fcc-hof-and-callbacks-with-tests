@@ -7,7 +7,7 @@ const greeting = () => {
 const getIndexToIns  = (arr, num) => {
    const index = el => el >= num
     
-  return arr.sort().findIndex(index)
+  return arr.sort((a,b) => a-b).findIndex(index)
 }
 
 // Node / Jest export
