@@ -30,5 +30,9 @@ describe("getIndexToIns", () => {
     expect(findIndexSpy).toHaveBeenCalled();
     findIndexSpy.mockRestore();
   })
-
+  // Test 5. getIndexToIns([10, 20, 30, 40, 50], 35) should return 3.
+  test("getIndexToIns([10, 20, 30, 40, 50], 35) should return 3", ()=> {
+    expect(getIndexToIns([10, 20, 30, 40, 50], 35))
+    .toBe(3)
+  })
 });
