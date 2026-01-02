@@ -50,4 +50,8 @@ describe("getIndexToIns", () => {
   test("getIndexToIns([5, 3, 20, 3], 5) should return 2.", () => {
     expect(getIndexToIns([5, 3, 20, 3], 5)).toBe(2)
   })
+  // Test 10. getIndexToIns([2, 20, 10], 19) should return 2.
+  test("getIndexToIns([2, 20, 10], 19) should return 2.", () => {
+    expect(getIndexToIns([2, 20, 10], 19)).toBe(2)
+  })
 });
