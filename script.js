@@ -20,7 +20,16 @@ const getIndexToIns = (arr, num) => {
   return result === -1 ? arr.length : result;
 };
 
-// console.log(getIndexToIns([3, 10, 5], 11))
+// Lab: Build a Symmetric Difference Function
+
+// User Stories:
+
+// Your function diffArray should return an array.
+// Your function should take two arguments, both of which are arrays.
+// Your function should make use of the filter method.
+// Your function should return the symmetric difference of the two arrays.
+// Your function should return an empty array if there is no symmetric difference.
+
 // Node / Jest export
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
