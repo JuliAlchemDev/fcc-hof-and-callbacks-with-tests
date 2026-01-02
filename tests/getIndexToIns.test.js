@@ -19,9 +19,9 @@ describe("getIndexToIns", () => {
 
     expect(sortSpy).toHaveBeenCalled();
     sortSpy.mockRestore();
-  })
+  });
   //   Test 4. Your function should make use of the findIndex method.
-  test("function should use findIndex method", ()=>{
+  test("function should use findIndex method", () => {
     const arr = [3, 1, 2];
 
     const findIndexSpy = jest.spyOn(arr, "findIndex");
@@ -29,10 +29,13 @@ describe("getIndexToIns", () => {
 
     expect(findIndexSpy).toHaveBeenCalled();
     findIndexSpy.mockRestore();
-  })
+  });
   // Test 5. getIndexToIns([10, 20, 30, 40, 50], 35) should return 3.
-  test("getIndexToIns([10, 20, 30, 40, 50], 35) should return 3", ()=> {
-    expect(getIndexToIns([10, 20, 30, 40, 50], 35))
-    .toBe(3)
-  })
+  test("getIndexToIns([10, 20, 30, 40, 50], 35) should return 3", () => {
+    expect(getIndexToIns([10, 20, 30, 40, 50], 35)).toBe(3);
+  });
+  // Test 6. getIndexToIns([10, 20, 30, 40, 50], 30) should return 2.
+  test("getIndexToIns([10, 20, 30, 40, 50], 30) should return 2.", () => {
+    expect(getIndexToIns([10, 20, 30, 40, 50], 30)).toBe(2);
+  });
 });
