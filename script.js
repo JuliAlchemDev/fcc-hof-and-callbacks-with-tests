@@ -5,7 +5,7 @@ const greeting = () => {
 // Implement a Sorted Index Finder
 
 const getIndexToIns  = (arr, num) => {
-   const index = el => el > num
+   const index = el => el >= num
     
   return arr.sort().findIndex(index)
 }
