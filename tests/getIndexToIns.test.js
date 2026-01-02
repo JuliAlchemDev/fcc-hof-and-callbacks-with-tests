@@ -38,8 +38,12 @@ describe("getIndexToIns", () => {
   test("getIndexToIns([10, 20, 30, 40, 50], 30) should return 2.", () => {
     expect(getIndexToIns([10, 20, 30, 40, 50], 30)).toBe(2);
   });
-  // Test 7. getIndexToIns([40, 60], 50) should return 1 
-  test("getIndexToIns([40, 60], 50) should return 1 ", () => {
+  // Test 7. getIndexToIns([40, 60], 50) should return 1.
+  test("getIndexToIns([40, 60], 50) should return 1.", () => {
     expect(getIndexToIns([40, 60], 50)).toBe(1)
+  })
+  // Test 8. getIndexToIns([3, 10, 5], 3) should return 0.
+  test("getIndexToIns([3, 10, 5], 3) should return 0.", () => {
+    expect(getIndexToIns([3, 10, 5], 3)).toBe(0)
   })
 });
