@@ -10,7 +10,7 @@ describe("getIndexToIns", () => {
     expect(typeof getIndexToIns([], 5)).toBe("number");
   });
   //   Test 3. Your function should use the sort method.
-  test("function should use the sort method.", () => {
+  test("function should use the sort method", () => {
     const arr = [3, 1, 2];
 
     const sortSpy = jest.spyOn(arr, "sort");
@@ -20,4 +20,15 @@ describe("getIndexToIns", () => {
     expect(sortSpy).toHaveBeenCalled();
     sortSpy.mockRestore();
   })
+  //   Test 4. Your function should make use of the findIndex method.
+  test("function should use findIndex method", ()=>{
+    const arr = [3, 1, 2];
+
+    const findIndexSpy = jest.spyOn(arr, "findIndex");
+    getIndexToIns(arr, 2);
+
+    expect(findIndexSpy).toHaveBeenCalled();
+    findIndexSpy.mockRestore();
+  })
+
 });
