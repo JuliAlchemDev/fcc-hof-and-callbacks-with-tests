@@ -29,7 +29,9 @@ const getIndexToIns = (arr, num) => {
 // Your function should make use of the filter method.
 // Your function should return the symmetric difference of the two arrays.
 // Your function should return an empty array if there is no symmetric difference.
+const diffArray = () => {
 
+}
 // Node / Jest export
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
