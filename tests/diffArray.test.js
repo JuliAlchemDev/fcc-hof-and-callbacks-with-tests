@@ -43,6 +43,10 @@ describe("diffArray", ()=> {
             .toEqual(["pen", "pencil", "notebook"])
     })
     // Test 7: diffArray(["car", "bike", "bus"], ["bike", "train", "plane", "bus"]) should return ["car", "train", "plane"].
+     test("returns unique items from both arrays — car/bike case", () => {
+        expect(diffArray(["car", "bike", "bus"], ["bike", "train", "plane", "bus"]))
+            .toEqual(["car", "train", "plane"])
+    })
     // Test 8: diffArray(["apple", "orange"], ["apple", "orange", "banana", "grape"]) should return ["banana", "grape"].
     // Test 9: diffArray([], ["apple", "banana"]) should return ["apple", "banana"].
     // Test 10: diffArray(["apple", "banana"], []) should return ["apple", "banana"].
