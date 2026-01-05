@@ -2,6 +2,9 @@ const { diffArray } = require("../script");
 
 describe("diffArray", ()=> {
     // Test 1: You should have a function named diffArray.
+    test("should be a function", ()=> {
+        expect(typeof diffArray).toBe("function")
+    })
     // Test 2: The diffArray function should use the filter method to filter out items 
     // that are present in both arrays.
     // Test 3: diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], 
