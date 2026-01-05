@@ -19,6 +19,10 @@ describe("diffArray", ()=> {
     })
     // Test 3: diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], 
     // ["diorite", "andesite", "grass", "dirt", "dead shrub"]) should return ["pink wool"].
+    test("should return only the unique elements", () => {
+        expect(diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]))
+        .toEqual(["pink wool"])
+    })
     // Test 4: diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], 
     // ["andesite", "grass", "dirt", "dead shrub"]) should return ["diorite", "pink wool"].
     // Test 5: diffArray should return an empty array when called with two identical arrays.
