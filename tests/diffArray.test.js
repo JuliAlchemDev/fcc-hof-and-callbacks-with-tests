@@ -32,12 +32,16 @@ describe("diffArray", ()=> {
             .toEqual(["diorite", "pink wool"])
     })
     // Test 5: diffArray should return an empty array when called with two identical arrays.
-     test("should return an empty array when called with two identical arrays.", () => {
+     test("should return an empty array when called with two identical arrays", () => {
         expect(diffArray(["andesite", "grass", "dirt", "dead shrub"], 
             ["andesite", "grass", "dirt", "dead shrub"]))
             .toEqual([])
     })
     // Test 6: diffArray(["pen", "book"], ["book", "pencil", "notebook"]) should return ["pen", "pencil", "notebook"].
+     test("should return symmetric difference of both arrays", () => {
+        expect(diffArray(["pen", "book"], ["book", "pencil", "notebook"]))
+            .toEqual(["pen", "pencil", "notebook"])
+    })
     // Test 7: diffArray(["car", "bike", "bus"], ["bike", "train", "plane", "bus"]) should return ["car", "train", "plane"].
     // Test 8: diffArray(["apple", "orange"], ["apple", "orange", "banana", "grape"]) should return ["banana", "grape"].
     // Test 9: diffArray([], ["apple", "banana"]) should return ["apple", "banana"].
