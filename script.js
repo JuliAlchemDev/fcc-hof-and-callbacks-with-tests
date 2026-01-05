@@ -36,10 +36,15 @@ const diffArray = (arr1, arr2) => {
       result.push(word)
     }
   })
+  arr2.filter((word) => {
+    if(!arr1.includes(word)){
+      result.push(word)
+    }
+  })
  return result 
   
 }
-
+console.log(diffArray(["pen", "book"], ["book", "pencil", "notebook"])) // ["pen", "pencil", "notebook"]
 // Node / Jest export
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
