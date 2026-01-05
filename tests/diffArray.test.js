@@ -7,6 +7,16 @@ describe("diffArray", ()=> {
     })
     // Test 2: The diffArray function should use the filter method to filter out items 
     // that are present in both arrays.
+    test("should use the filter method in both arrays", () => {
+        const arr1 = [1,2,3]
+        const arr2 = [5,7,9]
+
+        const filterSpy = jest.spyOn(arr1, "filter")
+        diffArray(arr1, arr2);
+        expect(filterSpy).toHaveBeenCalled();
+        filterSpy.mockRestore()
+
+    })
     // Test 3: diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], 
     // ["diorite", "andesite", "grass", "dirt", "dead shrub"]) should return ["pink wool"].
     // Test 4: diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], 
