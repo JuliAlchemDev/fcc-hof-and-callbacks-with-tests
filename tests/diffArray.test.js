@@ -58,6 +58,10 @@ describe("diffArray", ()=> {
         .toEqual(["apple", "banana"])
     })
     // Test 10: diffArray(["apple", "banana"], []) should return ["apple", "banana"].
+    test("should return first array if second is empty", () => {
+        expect(diffArray(["apple", "banana"], []))
+        .toEqual(["apple", "banana"])
+    })
     // Test 11: diffArray([], []) should return [].
   
 })
