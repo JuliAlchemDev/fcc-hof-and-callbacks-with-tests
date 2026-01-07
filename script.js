@@ -30,21 +30,12 @@ const getIndexToIns = (arr, num) => {
 // Your function should return the symmetric difference of the two arrays.
 // Your function should return an empty array if there is no symmetric difference.
 const diffArray = (arr1, arr2) => {
-  const result = []
-  arr1.filter((word) => {
-    if(!arr2.includes(word)){
-      result.push(word)
-    }
-  })
-  arr2.filter((word) => {
-    if(!arr1.includes(word)){
-      result.push(word)
-    }
-  })
- return result 
-  
+  return [
+    ...arr1.filter(word => !arr2.includes(word)), 
+    ...arr2.filter(word => !arr1.includes(word))
+  ]  
 }
-console.log(diffArray(["pen", "book"], ["book", "pencil", "notebook"])) // ["pen", "pencil", "notebook"]
+
 // Node / Jest export
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
