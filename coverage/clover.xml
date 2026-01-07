@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1767785125440" clover="3.2.0">
-  <project timestamp="1767785125440" name="All files">
+<coverage generated="1767811485583" clover="3.2.0">
+  <project timestamp="1767811485583" name="All files">
     <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="5" methods="7" coveredmethods="7" elements="25" coveredelements="24" complexity="0" loc="12" ncloc="12" packages="1" files="1" classes="1"/>
     <file name="script.js" path="/Users/juliaalchemova/Desktop/FCC Labs/JavaScript/fcc-hof-and-callbacks-with-tests/script.js">
       <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="5" methods="7" coveredmethods="7"/>
