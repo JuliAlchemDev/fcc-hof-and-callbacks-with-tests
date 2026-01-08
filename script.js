@@ -35,6 +35,15 @@ const diffArray = (arr1, arr2) => {
     ...arr2.filter(word => !arr1.includes(word))
   ]  
 }
+// Implement a Value Remover Function
+
+// User Stories:
+
+// You should have a destroyer function that accepts an array 
+// and one or more additional arguments.
+// The destroyer function should return a new array excluding all elements 
+// from the first argument that match any of the subsequent arguments.
+// The function must accept an indeterminate number of arguments.
 
 // Node / Jest export
 if (typeof module !== "undefined" && module.exports) {
