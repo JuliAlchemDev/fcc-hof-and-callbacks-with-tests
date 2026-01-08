@@ -21,6 +21,10 @@ describe("destroyer", () => {
     .toEqual([1])
   })
   // Test 5: destroyer([2, 3, 2, 3], 2, 3) should return [].
+  test("should return [] when all values match arguments", () => {
+    expect(destroyer([2, 3, 2, 3], 2, 3))
+    .toEqual([])
+  })
   // Test 6: destroyer(["tree", "hamburger", 53], "tree", 53) should return ["hamburger"].
   // Test 7: destroyer( ["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan" ) should return [12, 92, 65].
 });
