@@ -26,5 +26,9 @@ describe("destroyer", () => {
     .toEqual([])
   })
   // Test 6: destroyer(["tree", "hamburger", 53], "tree", 53) should return ["hamburger"].
+  test("should handle mixed types and remove specified values", () => {
+    expect(destroyer(["tree", "hamburger", 53], "tree", 53))
+    .toEqual(["hamburger"])
+  })
   // Test 7: destroyer( ["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan" ) should return [12, 92, 65].
 });
