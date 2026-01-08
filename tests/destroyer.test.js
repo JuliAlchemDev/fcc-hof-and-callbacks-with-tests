@@ -6,6 +6,10 @@ describe("destroyer", () => {
     expect(typeof destroyer).toBe("function");
   });
   // Test 2: destroyer([1, 2, 3, 1, 2, 3], 2, 3) should return [1, 1].
+  test("should return new array without the provided values", () => {
+    expect(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
+    .toEqual([1, 1])
+  })
   // Test 3: destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3) should return [1, 5, 1].
   // Test 4: destroyer([3, 5, 1, 2, 2], 2, 3, 5) should return [1].
   // Test 5: destroyer([2, 3, 2, 3], 2, 3) should return [].
