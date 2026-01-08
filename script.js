@@ -45,10 +45,10 @@ const diffArray = (arr1, arr2) => {
 // from the first argument that match any of the subsequent arguments.
 // The function must accept an indeterminate number of arguments.
 const destroyer = (arr, ...args) => {
-  return [...arr.filter(el => !args.includes(el))]
+  return arr.filter(el => !args.includes(el))
 }
 
-console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3)) // should return [1, 1]
+
 // Node / Jest export
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
