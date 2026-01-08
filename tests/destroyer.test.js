@@ -30,5 +30,10 @@ describe("destroyer", () => {
     expect(destroyer(["tree", "hamburger", 53], "tree", 53))
     .toEqual(["hamburger"])
   })
-  // Test 7: destroyer( ["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan" ) should return [12, 92, 65].
+  // Test 7: destroyer( ["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"]
+  // , "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan" ) should return [12, 92, 65].
+  test("should accept an indeterminate number of arguments", () => {
+    expect(destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan" ))
+    .toEqual([12, 92, 65])
+  })
 });
