@@ -16,6 +16,10 @@ describe("destroyer", () => {
     .toEqual([1, 5, 1])
   })
   // Test 4: destroyer([3, 5, 1, 2, 2], 2, 3, 5) should return [1].
+   test("should remove multiple specified values and keep the rest", () => {
+    expect(destroyer([3, 5, 1, 2, 2], 2, 3, 5))
+    .toEqual([1])
+  })
   // Test 5: destroyer([2, 3, 2, 3], 2, 3) should return [].
   // Test 6: destroyer(["tree", "hamburger", 53], "tree", 53) should return ["hamburger"].
   // Test 7: destroyer( ["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan" ) should return [12, 92, 65].
