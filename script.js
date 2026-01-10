@@ -6,10 +6,10 @@ const greeting = () => {
 
 // User Stories:
 
-// 1. You should have a getIndexToIns function that takes two arguments: 
+// 1. You should have a getIndexToIns function that takes two arguments:
 // an array and a number.
 // 2. You should use the sort method to sort the array in ascending order.
-// 3. Your getIndexToIns function should return the lowest index 
+// 3. Your getIndexToIns function should return the lowest index
 // at which the number should be inserted by using the findIndex method.
 // 4. Your getIndexToIns function should always return a number.
 
@@ -31,36 +31,41 @@ const getIndexToIns = (arr, num) => {
 // Your function should return an empty array if there is no symmetric difference.
 const diffArray = (arr1, arr2) => {
   return [
-    ...arr1.filter(word => !arr2.includes(word)), 
-    ...arr2.filter(word => !arr1.includes(word))
-  ]  
-}
+    ...arr1.filter((word) => !arr2.includes(word)),
+    ...arr2.filter((word) => !arr1.includes(word)),
+  ];
+};
 // Implement a Value Remover Function
 
 // User Stories:
 
-// You should have a destroyer function that accepts an array 
+// You should have a destroyer function that accepts an array
 // and one or more additional arguments.
-// The destroyer function should return a new array excluding all elements 
+// The destroyer function should return a new array excluding all elements
 // from the first argument that match any of the subsequent arguments.
 // The function must accept an indeterminate number of arguments.
 const destroyer = (arr, ...args) => {
-  return arr.filter(el => !args.includes(el))
-}
+  return arr.filter((el) => !args.includes(el));
+};
 
 // Implement a Matching Object Filter
 
 // User Stories:
 
-// You should have a whatIsInAName function that accepts two arguments, 
+// You should have a whatIsInAName function that accepts two arguments,
 // an array of objects and a source object.
-// The whatIsInAName function should return a new array containing only the objects from the collection 
+// The whatIsInAName function should return a new array containing only the objects from the collection
 // that have all the key–value pairs present in the source object.
-// If no objects match all the key–value pairs from the source, the function should return an empty array. 
+// If no objects match all the key–value pairs from the source, the function should return an empty array.
 
-const whatIsInAName = () => {
+const whatIsInAName = (arr, src) => {
+  let result = []
+  arr.filter((person) => {
+    if (person.last === src.last) result.push(person)
+  });
+  return result
+};
 
-}
 
 // Node / Jest export
 if (typeof module !== "undefined" && module.exports) {
@@ -68,9 +73,7 @@ if (typeof module !== "undefined" && module.exports) {
     greeting,
     getIndexToIns,
     diffArray,
-    destroyer, 
-    whatIsInAName
+    destroyer,
+    whatIsInAName,
   };
 }
-
-
