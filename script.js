@@ -58,6 +58,9 @@ const destroyer = (arr, ...args) => {
 // that have all the key–value pairs present in the source object.
 // If no objects match all the key–value pairs from the source, the function should return an empty array. 
 
+const whatIsInAName = () => {
+
+}
 
 // Node / Jest export
 if (typeof module !== "undefined" && module.exports) {
@@ -65,7 +68,8 @@ if (typeof module !== "undefined" && module.exports) {
     greeting,
     getIndexToIns,
     diffArray,
-    destroyer
+    destroyer, 
+    whatIsInAName
   };
 }
 
