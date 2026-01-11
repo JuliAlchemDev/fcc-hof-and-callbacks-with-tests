@@ -13,6 +13,10 @@ describe("whatIsInAName", () => {
   })
   // Test 3: whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 }) 
   // should return [{"apple": 1}, {"apple": 1}, {"apple": 1, "bat": 2}].
+  test("should return an array including all objects that match the source properties", () => {
+    expect(whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 }))
+    .toEqual([{"apple": 1}, {"apple": 1}, {"apple": 1, "bat": 2}])
+  })
   // Test 4: whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }) 
   // should return [{"apple": 1, "bat": 2}, {"apple": 1, "bat": 2, "cookie": 2}].
   // Test 5: whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 }) 
