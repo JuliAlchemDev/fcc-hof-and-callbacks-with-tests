@@ -59,13 +59,10 @@ const destroyer = (arr, ...args) => {
 // If no objects match all the key–value pairs from the source, the function should return an empty array.
 
 const whatIsInAName = (arr, src) => {
-  let result = []
-  arr.filter((person) => {
-    if (person.last === src.last) result.push(person)
-  });
-  return result
+ return arr.filter(obj => 
+   Object.keys(src).every(key => obj[key] === src[key])
+  )
 };
-
 
 // Node / Jest export
 if (typeof module !== "undefined" && module.exports) {
