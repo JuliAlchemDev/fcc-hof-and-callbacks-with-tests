@@ -37,6 +37,10 @@ describe("whatIsInAName", () => {
   })
   // Test 7: whatIsInAName([{"a": 1, "b": 2, "c": 3}], {"a": 1, "b": 9999, "c": 3}) 
   // should return [].
+  test("should return an empty array if no objects match the source keys", () => {
+    expect(whatIsInAName([{"a": 1, "b": 2, "c": 3}], {"a": 1, "b": 9999, "c": 3}))
+    .toEqual([])
+  })
   // Test 8: whatIsInAName([{"a": 1, "b": 2, "c": 3, "d": 9999}], {"a": 1, "b": 9999, "c": 3}) 
   // should return [].
 });
