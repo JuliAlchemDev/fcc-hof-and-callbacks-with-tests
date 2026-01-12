@@ -73,8 +73,23 @@ const whatIsInAName = (arr, src) => {
 // If the input number is less than 2, the function should return 0.
 
 const sumPrimes = (input) => {
-  return input < 2 ? 0 : input
-}
+  if(input < 2) return 0
+
+  let sum = 0
+
+  for(let i = 2; i <= input; i++){
+    let isPrime = true
+    for(let j = 2; j<i; j++){
+      if(i % j === 0){
+        isPrime =false
+      }
+    }  
+    if(isPrime){
+        sum +=i;
+      }
+   }
+    return sum
+  }
 
 // Node / Jest export
 if (typeof module !== "undefined" && module.exports) {
