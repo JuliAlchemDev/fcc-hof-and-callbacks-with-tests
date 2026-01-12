@@ -22,4 +22,7 @@ describe("sumPrimes", () => {
     expect(sumPrimes(0)).toBe(0)
   })
   // Test 6: sumPrimes(977) should return 73156.
+  test("should correctly sum all primes for a large input", ()=> {
+    expect(sumPrimes(977)).toBe(73156)
+  })
 });
