@@ -6,7 +6,9 @@ describe("sumPrimes", () => {
     expect(typeof sumPrimes).toBe("function");
   });
   // Test 2: sumPrimes(10) should return 17.
-
+  test("should sum all prime numbers up to 10", ()=> {
+    expect(sumPrimes(10)).toBe(17)
+  })
   // Test 3: sumPrimes(5) should return 10.
   test("should return sums all primes up to the given number", ()=> {
     expect(sumPrimes(5)).toBe(10)
