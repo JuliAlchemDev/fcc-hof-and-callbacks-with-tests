@@ -8,6 +8,9 @@ describe("sumPrimes", () => {
   // Test 2: sumPrimes(10) should return 17.
 
   // Test 3: sumPrimes(5) should return 10.
+  test("should return sums all primes up to the given number", ()=> {
+    expect(sumPrimes(5)).toBe(10)
+  })
   // Test 4: sumPrimes(2) should return 2.
   test("returns the input when it is the first prime", ()=> {
     expect(sumPrimes(2)).toBe(2)
