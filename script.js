@@ -72,6 +72,10 @@ const whatIsInAName = (arr, src) => {
 // The sumPrimes function should return the sum of all prime numbers less than or equal to the provided number.
 // If the input number is less than 2, the function should return 0.
 
+const sumPrimes = () => {
+
+}
+
 // Node / Jest export
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
@@ -80,5 +84,6 @@ if (typeof module !== "undefined" && module.exports) {
     diffArray,
     destroyer,
     whatIsInAName,
+    sumPrimes
   };
 }
