@@ -75,19 +75,19 @@ const whatIsInAName = (arr, src) => {
 const sumPrimes = (input) => {
   if(input < 2) return 0
 
-  let sum = 0
-
-  for(let i = 2; i <= input; i++){
-    let isPrime = true
-    for(let j = 2; j<i; j++){
-      if(i % j === 0){
-        isPrime =false
-      }
-    }  
-    if(isPrime){
-        sum +=i;
-      }
-   }
+  const isPrime = (num) => {
+    if(num < 2) return false
+    for(let i =2; i<num; i++){
+      if(num % i === 0) return false
+    }
+    return true
+  }
+  const numbers = []
+  for(let i = 2; i <=input; i++){
+    numbers.push(i)
+  }
+  const primes = numbers.filter(isPrime)
+  const sum = primes.reduce((total, num)=> total + num, 0)
     return sum
   }
 
