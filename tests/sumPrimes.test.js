@@ -6,8 +6,12 @@ describe("sumPrimes", () => {
     expect(typeof sumPrimes).toBe("function");
   });
   // Test 2: sumPrimes(10) should return 17.
+
   // Test 3: sumPrimes(5) should return 10.
   // Test 4: sumPrimes(2) should return 2.
   // Test 5: sumPrimes(0) should return 0.
+  test("returns 0 if the input is less than 2", ()=> {
+    expect(sumPrimes(0)).toBe(0)
+  })
   // Test 6: sumPrimes(977) should return 73156.
 });
