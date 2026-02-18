@@ -99,7 +99,7 @@ const sumPrimes = (input) => {
 // The function should handle input where the two numbers are not in numerical order.
 
 const smallestCommons = () => {
-  
+  return 2;
 }
 
 
