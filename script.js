@@ -98,11 +98,29 @@ const sumPrimes = (input) => {
 // The smallestCommons function should return the smallest common multiple that is evenly divisible by both numbers and all sequential numbers in the range between them.
 // The function should handle input where the two numbers are not in numerical order.
 
-const smallestCommons = () => {
-  return 2;
+const smallestCommons = (arr) => {
+  arr.sort((a, b)=> a - b);
+  let min = arr[0];
+  let max = arr[1];
+  let numRange = [];
+  while(min <= max){
+    numRange.push(min);
+    min++;
+  }
+  const mcd = (a, b) => {
+    if(b === 0) return a;
+    return mcd(b, a % b);
+  }
+  const mcm = (a, b) => {
+    return (a * b) / mcd(a, b);
+  }
+  let result = numRange.reduce((acc, current) => {
+    return mcm(acc, current);
+  })
+  return result;
 }
 
-
+// console.log(smallestCommons([5, 1]));
 // Node / Jest export
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
