@@ -23,5 +23,11 @@ describe("smallestCommons", ()=> {
         expect(smallestCommons([2,10])).toBe(2520);
     });
 // Test 6: smallestCommons([1, 13]) should return 360360.
+test("should return 360360 for [1, 13] case", ()=> {
+        expect(smallestCommons([1,13])).toBe(360360);
+    });
 // Test 7: smallestCommons([23, 18]) should return 6056820.
+test("should return 6056820 for [23, 18] case", ()=> {
+        expect(smallestCommons([23, 18])).toBe(6056820);
+    });
 })
