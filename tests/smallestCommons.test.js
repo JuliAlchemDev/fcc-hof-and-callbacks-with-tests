@@ -15,6 +15,9 @@ describe("smallestCommons", ()=> {
         expect(smallestCommons([1,5])).toBe(60);
     });
 // Test 4: smallestCommons([5, 1]) should return 60.
+ test("should handle input where the two numbers are not in numerical order", ()=> {
+        expect(smallestCommons([5,1])).toBe(60);
+    });
 // Test 5: smallestCommons([2, 10]) should return 2520.
 // Test 6: smallestCommons([1, 13]) should return 360360.
 // Test 7: smallestCommons([23, 18]) should return 6056820.
