@@ -1,6 +1,11 @@
 const {smallestCommons} = require("../script");
 
 // Test 1: You should have a smallestCommons function.
+describe("smallestCommons", ()=> {
+    test("should be a function", ()=> {
+        expect(typeof smallestCommons).toBe("function");
+    });
+})
 // Test 2: smallestCommons([1, 5]) should return a number.
 // Test 3" smallestCommons([1, 5]) should return 60.
 // Test 4: smallestCommons([5, 1]) should return 60.
