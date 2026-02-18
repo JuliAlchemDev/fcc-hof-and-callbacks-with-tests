@@ -90,6 +90,15 @@ const sumPrimes = (input) => {
   const sum = primes.reduce((total, num)=> total + num, 0)
     return sum
   }
+// Implement a Range-Based LCM Calculator
+
+// User Stories
+
+// You should have a smallestCommons function that accepts an array of two numbers as an argument.
+// The smallestCommons function should return the smallest common multiple that is evenly divisible by both numbers and all sequential numbers in the range between them.
+// The function should handle input where the two numbers are not in numerical order.
+
+
 
 // Node / Jest export
 if (typeof module !== "undefined" && module.exports) {
