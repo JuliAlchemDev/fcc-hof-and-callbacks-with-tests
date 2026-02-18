@@ -8,9 +8,12 @@ describe("smallestCommons", ()=> {
     });
 // Test 2: smallestCommons([1, 5]) should return a number.
     test("should return a number", ()=> {
-        expect(typeof smallestCommons()).toBe("number");
+        expect(typeof smallestCommons([1,5])).toBe("number");
     });
 // Test 3" smallestCommons([1, 5]) should return 60.
+    test("should return a number", ()=> {
+        expect(smallestCommons([1,5])).toBe(60);
+    });
 // Test 4: smallestCommons([5, 1]) should return 60.
 // Test 5: smallestCommons([2, 10]) should return 2520.
 // Test 6: smallestCommons([1, 13]) should return 360360.
